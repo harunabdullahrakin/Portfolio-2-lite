@@ -505,7 +505,6 @@ button:nth-child(24):hover {
 
 
 #preloader {
-	background: #000 url(../img/preloader.gif) no-repeat center center;
 	height: 100vh;
 	width: 100%;
 	position: fixed;
@@ -514,6 +513,67 @@ button:nth-child(24):hover {
 
 
 
+.container {
+	background-color: black;
+	color: #fff;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+  }
+  
+  .loading-page {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(90deg, rgba(38,42,52,1) 42%, rgba(51,53,65,1) 61%, rgba(53,57,66,1) 68%);
+  
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	align-items: center;
+	justify-content: center;
+	color: #191654;
+	
+  }
+  
+  #svg {
+	height: 150px;
+	width: 150px;
+	stroke: white;
+	fill-opacity: 0;
+	stroke-width: 3px;
+	stroke-dasharray: 4500;
+	animation: draw 10s ease;
+  }
+  
+  @keyframes draw {
+	0% {
+	  stroke-dashoffset: 4500;
+	}
+	100% {
+	  stroke-dashoffset: 0;
+	}
+  }
+  
+  .name-container {
+	height: 30px;
+	overflow: hidden;
+  }
+  
+  .logo-name {
+	color: #fff;
+	font-size: 20px;
+	letter-spacing: 12px;
+	text-transform: uppercase;
+	margin-left: 20px;
+	font-weight: bolder;
+  }
+  
 
 
 
